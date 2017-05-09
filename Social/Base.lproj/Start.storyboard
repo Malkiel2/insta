@@ -13,7 +13,7 @@
         <!--Sign InVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="SignInVC" customModule="Social" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SignInVC" id="BYZ-38-t0r" customClass="SignInVC" customModule="Social" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -53,7 +53,7 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <segue destination="KPC-ML-wel" kind="presentation" id="WtE-BK-dbB"/>
+                                            <action selector="signInButton_TouchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pXp-Qe-Eq4"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -92,6 +92,8 @@
                     <connections>
                         <outlet property="emailTextField" destination="9Zq-Ou-nk1" id="hkE-M5-gMF"/>
                         <outlet property="passwordTextField" destination="rmX-zO-Zdo" id="k4a-FK-nWr"/>
+                        <outlet property="signInBtn" destination="pQX-77-HBs" id="mhu-zw-dlO"/>
+                        <segue destination="KPC-ML-wel" kind="presentation" identifier="signInToTabBarVC" id="dKt-wo-CLw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -150,7 +152,7 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <segue destination="KPC-ML-wel" kind="presentation" id="Cri-b9-BP4"/>
+                                            <action selector="signUpBtn_TouchUpInside:" destination="2vm-dG-I1Y" eventType="touchUpInside" id="ewk-LS-Kzb"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -186,6 +188,14 @@
                             <constraint firstItem="Um5-bR-MW7" firstAttribute="top" secondItem="EdY-mL-Etj" secondAttribute="bottom" id="v1l-g5-lYj"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="CwV-V6-uUT" id="aXt-xe-aLh"/>
+                        <outlet property="passwordTextField" destination="giI-Jj-UNR" id="0iO-pq-Yz6"/>
+                        <outlet property="profileImage" destination="MOI-6P-XRY" id="dnR-uh-jf4"/>
+                        <outlet property="signUpBtn" destination="l9G-jJ-jcB" id="MQY-QS-FfJ"/>
+                        <outlet property="usernameTextField" destination="2sE-Ti-nGA" id="PB7-41-i4n"/>
+                        <segue destination="KPC-ML-wel" kind="presentation" identifier="signInToTabBarVC" id="ajL-Dv-Ir1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GwP-o0-b2b" sceneMemberID="firstResponder"/>
             </objects>
@@ -204,6 +214,6 @@
         <image name="placeholderImg" width="336" height="336"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="WtE-BK-dbB"/>
+        <segue reference="dKt-wo-CLw"/>
     </inferredMetricsTieBreakers>
 </document>
